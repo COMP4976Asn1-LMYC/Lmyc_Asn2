@@ -1,0 +1,12 @@
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\bin\Debug\netcoreapp2.0\LmycWeb.deps.json
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\bin\Debug\netcoreapp2.0\LmycWeb.runtimeconfig.json
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\bin\Debug\netcoreapp2.0\LmycWeb.runtimeconfig.dev.json
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\bin\Debug\netcoreapp2.0\LmycWeb.dll
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\bin\Debug\netcoreapp2.0\LmycWeb.pdb
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\LmycWeb.csprojResolveAssemblyReference.cache
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\LmycWeb.csproj.CoreCompileInputs.cache
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\LmycWeb.AssemblyInfoInputs.cache
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\LmycWeb.AssemblyInfo.cs
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\LmycWeb.dll
+E:\BCIT\WebApp\Lmyc_Asn2\LmycWeb\obj\Debug\netcoreapp2.0\LmycWeb.pdb

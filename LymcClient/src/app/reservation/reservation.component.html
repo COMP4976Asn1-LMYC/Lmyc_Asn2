@@ -1,0 +1,40 @@
+<p>
+  Reservation List
+</p>
+
+<table *ngIf="results" border="1">
+    <thead>
+      <tr>
+        <th>Boat Name</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Itinerary</th>
+        <th>AllocatedCredit</th>
+        <th>AllocatedHours</th>
+        <th>CreatedBy</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of results; let i=index">
+        <td>{{b.boatName}}</td>
+        <td>{{b.startDateTime}}</td>
+        <td>{{b.endDateTime}}</td>
+        <td>{{b.itinerary}}</td>
+        <td>{{b.allocatedCredit}}</td>
+        <td>{{b.allocatedHours}}</td>
+        <td>{{b.user}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <div>
+      <p><label>First Name: </label><input [(ngModel)]="newReservation.boatName" placeholder="First Name"></p>
+      <p><label>Last Name: </label><input [(ngModel)]="newReservation.LastName" placeholder="Last Name"></p>
+      <p><label>Occupation: </label><input [(ngModel)]="newReservation.Occupation" placeholder="Occupation"></p>
+      <p><label>Gender: </label><input [(ngModel)]="newReservation.Gender" placeholder="M or F"></p>
+      <p><label>Picture: </label><input [(ngModel)]="newReservation.Picture" placeholder="Picture URL"></p>
+      <button (click)="add(newCharacter);">
+        Add
+      </button>
+    </div> -->
