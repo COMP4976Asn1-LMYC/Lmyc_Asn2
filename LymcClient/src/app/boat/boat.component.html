@@ -1,0 +1,32 @@
+<p>
+  Boat List
+</p>
+
+<table *ngIf="results" border="1">
+  <thead>
+    <tr>
+      <th>Boat ID</th>
+      <th>Boat Name</th>
+      <th>Picture</th>
+      <th>LengthInFeet</th>
+      <th>Make</th>
+      <th>Year</th>
+      <th>CreationDate</th>
+      <th>CreatedBy</th>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of results; let i=index">
+      <td>{{b.boatId}}</td>
+      <td>{{b.boatName}}</td>
+      <td><img src="{{b.picture}}" alt="{{b.boatName}}"></td>
+      <td>{{b.lengthInFeet}}</td>
+      <td>{{b.make}}</td>
+      <td>{{b.year}}</td>
+      <td>{{b.creationDate}}</td>
+      <td>{{b.createdBy}}</td>
+      <td>{{b.user}}</td>
+    </tr>
+  </tbody>
+</table>
