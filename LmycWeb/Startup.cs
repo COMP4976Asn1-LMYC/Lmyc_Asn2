@@ -11,6 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using LmycWeb.Data;
 using LmycWeb.Models;
 using LmycWeb.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.Options;
 
 namespace LmycWeb
 {
@@ -26,6 +30,16 @@ namespace LmycWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddLocalization(opts => {
+                opts.ResourcesPath = "Resources";
+            });
+            services.AddMvc()
+                .AddViewLocalization(
+                    opts => { opts.ResourcesPath = "Resources"; })
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -42,6 +56,24 @@ namespace LmycWeb
             {
                 options.AddPolicy("LoginRequired", policy => policy.RequireAuthenticatedUser());
                 options.AddPolicy("AdminRequired", policy => policy.RequireRole("Admin"));
+            }); services.Configure<RequestLocalizationOptions>(opts => {
+
+                var supportedCultures = new List<CultureInfo> {
+                new CultureInfo("en"),      
+                new CultureInfo("en-US"),
+                new CultureInfo("ja"),
+              };
+
+                opts.DefaultRequestCulture = new RequestCulture("en-US");
+
+                // Formatting numbers, dates, etc.
+
+                opts.SupportedCultures = supportedCultures;
+
+                // UI strings that we have localized.
+
+                opts.SupportedUICultures = supportedCultures;
+
             });
         }
 
@@ -59,6 +91,8 @@ namespace LmycWeb
             }
 
             app.UseStaticFiles();
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
 
             app.UseAuthentication();
 

@@ -31,6 +31,11 @@
         "runtime": {
           "LmycWeb.dll": {}
         },
+        "resources": {
+          "ja/LmycWeb.resources.dll": {
+            "locale": "ja"
+          }
+        },
         "compile": {
           "LmycWeb.dll": {}
         }

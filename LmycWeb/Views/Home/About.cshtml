@@ -1,5 +1,9 @@
-﻿@{
-    ViewData["Title"] = "About";
+﻿@model IEnumerable<LmycWeb.Models.Boat>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+
+@{
+    ViewData["Title"] = _localizer["About Us"];
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>

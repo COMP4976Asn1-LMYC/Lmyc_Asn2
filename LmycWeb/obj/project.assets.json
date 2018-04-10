@@ -13130,9 +13130,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "E:\\BCIT\\WebApp\\Lmyc_Asn2\\LmycWeb\\LmycWeb.csproj",
       "projectName": "LmycWeb",
